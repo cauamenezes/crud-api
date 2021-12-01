@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/button.css" />
+        <link rel="stylesheet" href="css/records.css" />
+        <link rel="stylesheet" href="css/modal.css" />
+        <script src="./js/main.js" defer type="module"></script>
+        <title>CRUD</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="header-title">Cadastro de Produtos</h1>
+        </header>
+        <main>
+            <button
+                type="button"
+                class="button blue mobile"
+                id="cadastrarCliente"
+            >
+                Cadastrar Produto
+            </button>
+            <table class="records">
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Categoria</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>
+                            <img src="./img/mouse.jpg" class="produto-image" />
+                        </td>
+                        <td>Mouse</td>
+                        <td>120,50</td>
+                        <td>Informática</td>
+                        <td>
+                            <button type="button" class="button green">
+                                editar
+                            </button>
+                            <button type="button" class="button red">
+                                excluir
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img
+                                src="./img/teclado.jpg"
+                                class="produto-image"
+                            />
+                        </td>
+                        <td>Teclado</td>
+                        <td>15,99</td>
+                        <td>Informática</td>
+                        <td>
+                            <button type="button" class="button green">
+                                editar
+                            </button>
+                            <button type="button" class="button red">
+                                excluir
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./img/mouse.jpg" class="produto-image" />
+                        </td>
+                        <td>Mouse</td>
+                        <td>12,50</td>
+                        <td>Informática</td>
+                        <td>
+                            <button type="button" class="button green">
+                                editar
+                            </button>
+                            <button type="button" class="button red">
+                                excluir
+                            </button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <header class="modal-header">
+                        <h2>Novo Cliente</h2>
+                        <span class="modal-close" id="modalClose"
+                            >&#10006;</span
+                        >
+                    </header>
+                    <form class="modal-form">
+                        <div class="image-container">
+                            <input
+                                id="inputFile"
+                                type="file"
+                                accept="image/*"
+                            />
+                            <label for="inputFile"></label>
+                            <img src="./img/foto.png" id="imagePreview" />
+                        </div>
+                        <div class="field-container">
+                            <div class="field">
+                                <input
+                                    type="text"
+                                    class="field-input"
+                                    id="product"
+                                    required
+                                />
+                                <label for="produto" class="field-label">
+                                    Produto
+                                </label>
+                            </div>
+                            <div class="field">
+                                <input
+                                    type="text"
+                                    class="field-input"
+                                    id="price"
+                                    required
+                                />
+                                <label for="price" class="field-label">
+                                    Preço
+                                </label>
+                            </div>
+                            <div class="field">
+                                <input
+                                    type="text"
+                                    class="field-input"
+                                    id="category"
+                                    required
+                                />
+                                <label for="category" class="field-label">
+                                    categoria
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <footer class="modal-footer">
+                        <button class="button green" id="save">Salvar</button>
+                        <button class="button blue" id="cancel">
+                            Cancelar
+                        </button>
+                    </footer>
+                </div>
+            </div>
+        </main>
+        <footer>Copyright &copy; Prof. Fernando Leonid</footer>
+    </body>
+</html>
